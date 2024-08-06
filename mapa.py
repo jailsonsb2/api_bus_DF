@@ -3,7 +3,7 @@ import pyproj
 
 def gerar_mapa(dados_onibus):
     """Gera um mapa HTML com a localização dos ônibus."""
-    mapa_onibus = folium.Map(location=[-15.8, -48], zoom_start=14)
+    mapa_onibus = folium.Map(location=[-15.8626, -47.9576], zoom_start=12)
 
     # Definir projeções
     proj_4326 = pyproj.CRS("EPSG:4326")  # WGS 84 (latitude e longitude)
