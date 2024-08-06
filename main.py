@@ -1,11 +1,16 @@
 from fastapi import FastAPI, HTTPException
-from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse, RedirectResponse
 import requests
 import mapa
 from geopy.distance import geodesic
 from datetime import datetime, timedelta
 
 app = FastAPI(title="API Localização de Ônibus")
+
+@app.get("/", response_class=RedirectResponse)
+async def redirect_to_docs():
+    """Redireciona para a documentação da API."""
+    return RedirectResponse(url="/docs")
 
 @app.get("/onibus/{linha}")
 def get_onibus_by_linha(linha: str):
