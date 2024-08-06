@@ -16,8 +16,8 @@ async def redirect_to_docs():
 def get_onibus_by_linha(linha: str):
     """Retorna os dados dos ônibus da linha especificada."""
     url = f"https://geoserver.semob.df.gov.br/geoserver/semob/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=semob%3AUltima%20Posicao%20Transmitida&outputFormat=application%2Fjson&CQL_FILTER=numerolinha='{linha}'"
-    # Desabilitando verificação SSL (apenas para teste) - REMOVA EM PRODUÇÃO!
-    response = requests.get(url, verify=False)
+    #response = requests.get(url, verify=False)   REMOVA verify=False EM PRODUÇÃO!
+    response = requests.get(url)
 
     if response.status_code == 200:
         data = response.json()
@@ -43,7 +43,8 @@ def get_mapa_onibus(linha: str):
 async def get_horarios_ida(linha: str):
     """Retorna os horários programados para a ida da linha especificada."""
     url = f"https://geoserver.semob.df.gov.br/geoserver/semob/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=semob%3AViagens%20Programadas%20por%20Linha&outputFormat=application%2Fjson&CQL_FILTER=cd_linha='{linha}' AND cs_sentido='I'"
-    response = requests.get(url, verify=False)  # REMOVA verify=False EM PRODUÇÃO!
+    #response = requests.get(url, verify=False)   REMOVA verify=False EM PRODUÇÃO!
+    response = requests.get(url)
 
     if response.status_code == 200:
         data = response.json()
@@ -58,7 +59,8 @@ async def get_horarios_ida(linha: str):
 async def get_horarios_volta(linha: str):
     """Retorna os horários programados para a volta da linha especificada."""
     url = f"https://geoserver.semob.df.gov.br/geoserver/semob/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=semob%3AViagens%20Programadas%20por%20Linha&outputFormat=application%2Fjson&CQL_FILTER=cd_linha='{linha}' AND cs_sentido='V'"
-    response = requests.get(url, verify=False)  # REMOVA verify=False EM PRODUÇÃO!
+    #response = requests.get(url, verify=False)   REMOVA verify=False EM PRODUÇÃO!
+    response = requests.get(url)
 
     if response.status_code == 200:
         data = response.json()
