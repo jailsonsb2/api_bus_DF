@@ -1,5 +1,5 @@
 spec:
- name: digital-ocean-fast-api
+ name: digital-ocean-onibus-df-api
  services:
  - name: web
    git:
