@@ -52,31 +52,6 @@ Este projeto fornece uma API FastAPI que consulta dados de ônibus em tempo real
     - Ida: `http://localhost:8000/horarios/ida/0.809`
     - Volta: `http://localhost:8000/horarios/volta/0.809`
 
-
-## Início Rápido com deploy no DigitalOcean
-
-1. Clique no botão "Deploy to DO" logo abaixo.
-2. Siga as instruções no Digital Ocean para implementar seu aplicativo.
-3. Aproveite seu aplicativo FastAPI rodando na nuvem!
-
-[![Deploy to DO](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/jailsonsb2/api_onibus_DF/tree/main)
-
-Não tem uma conta? Ganhe um bônus de $200 para testar!
-
-[![DigitalOcean Referral Badge](https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%203.svg)](https://www.digitalocean.com/?refcode=54a7273746ae&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)
-
-**Exemplo de requisição para a linha 813.2:**
-
-* Localização em tempo real: 
-    - Dados JSON: `https://api.jailson.es/onibus/813.2`
-    - Mapa: `https://api.jailson.es/mapa/813.2`
-* Tempo estimado de chegada (para latitude -15.7801 e longitude -47.9292): 
-  `https://api.jailson.es/tempo-chegada/813.2/-15.7801/-47.9292`
-* Horários:
-    - Ida: `https://api.jailson.es/horarios/ida/813.2`
-    - Volta: `https://api.jailson.es/horarios/volta/813.2`
-
-
 ### Observações:
 
 * A API utiliza dados em tempo real, então a localização dos ônibus e os tempos de chegada são apenas estimativas.
