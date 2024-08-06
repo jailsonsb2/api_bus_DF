@@ -65,6 +65,17 @@ Não tem uma conta? Ganhe um bônus de $200 para testar!
 
 [![DigitalOcean Referral Badge](https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%203.svg)](https://www.digitalocean.com/?refcode=54a7273746ae&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)
 
+**Exemplo de requisição para a linha 813.2:**
+
+* Localização em tempo real: 
+    - Dados JSON: `https://api.jailson.es/onibus/813.2`
+    - Mapa: `https://api.jailson.es/mapa/813.2`
+* Tempo estimado de chegada (para latitude -15.7801 e longitude -47.9292): 
+  `https://api.jailson.es/tempo-chegada/813.2/-15.7801/-47.9292`
+* Horários:
+    - Ida: `https://api.jailson.es/horarios/ida/813.2`
+    - Volta: `https://api.jailson.es/horarios/volta/813.2`
+
 
 ### Observações:
 
