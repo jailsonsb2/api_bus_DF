@@ -55,7 +55,7 @@ Este projeto fornece uma API FastAPI que consulta dados de ônibus em tempo real
 
 ## Início Rápido com deploy no DigitalOcean
 
-1. Clique no botão "Deploy to DO" na parte superior.
+1. Clique no botão "Deploy to DO" logo abaixo.
 2. Siga as instruções no Digital Ocean para implementar seu aplicativo.
 3. Aproveite seu aplicativo FastAPI rodando na nuvem!
 
